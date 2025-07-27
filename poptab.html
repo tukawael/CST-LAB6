@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         var massage = " welcome to js ";
+         var i = 0;
+         var newwindow = window.open("", "new window", "width=300,height=200");
+         var _counter = setInterval(function() {
+            if (i < massage.length) {
+                newwindow.document.write(massage[i]);
+                i++;
+            } else
+             {
+                clearInterval(_counter);
+                setTimeout(function() {
+                    newwindow.close();
+                 }, 1000);
+             }
+        }, 1000);
+            
+
+    </script>
+</body>
+</html>
